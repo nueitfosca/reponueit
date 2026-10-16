@@ -31,7 +31,7 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#172F30"
+        light: "#FF00FF"
         lightgray: "#23403F"
         gray: "#52706C"
         darkgray: "#C0D1CC"
