@@ -32,22 +32,51 @@
 
 
 /* ==============================
-   TABLAS: BORDES SIN DOBLE MARCO
+   TABLAS: UN SOLO MARCO EXTERIOR
    ============================== */
 
 .table-container {
-  border: none;
-  overflow-x: visible;
+  border: none !important;
+  overflow-x: auto;
 }
 
 .table-container table {
   width: 100%;
+  border: none !important;
   border-collapse: collapse;
-  border: 1px solid var(--lightgray);
 }
 
+/* Separadores interiores */
 .table-container th,
 .table-container td {
-  border: 1px solid var(--lightgray);
+  border: none !important;
+  border-right: 1px solid var(--lightgray) !important;
+  border-bottom: 1px solid var(--lightgray) !important;
+}
+
+/* Eliminar el separador a la derecha de la última columna */
+.table-container th:last-child,
+.table-container td:last-child {
+  border-right: none !important;
+}
+
+/* Marco exterior: arriba y abajo */
+.table-container thead tr:first-child th {
+  border-top: 1px solid var(--lightgray) !important;
+}
+
+.table-container tbody tr:last-child td {
+  border-bottom: 1px solid var(--lightgray) !important;
+}
+
+/* Marco exterior: izquierda y derecha */
+.table-container th:first-child,
+.table-container td:first-child {
+  border-left: 1px solid var(--lightgray) !important;
+}
+
+.table-container th:last-child,
+.table-container td:last-child {
+  border-right: 1px solid var(--lightgray) !important;
 }
 
