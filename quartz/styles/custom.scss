@@ -35,3 +35,16 @@
 .table-container tr {
   border-bottom: 1px solid var(--lightgray);
 }
+
+
+/* Contorno exterior de la tabla */
+.table-container table {
+  border: 1px solid var(--lightgray);
+  border-collapse: collapse;
+}
+
+/* Bordes de las celdas del encabezado y del cuerpo */
+.table-container th,
+.table-container td {
+  border: 1px solid var(--lightgray);
+}
