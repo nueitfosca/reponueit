@@ -7,15 +7,40 @@
 @use "sass:list";
 
 // ==============================
+// PÁGINA A PANTALLA COMPLETA, SIN BARRAS LATERALES
+// ==============================
+
+.page {
+  max-width: 100%;
+  margin: 0;
+}
+
+.page > #quartz-body {
+  display: block !important;   // sin rejilla: no quedan columnas vacías
+
+  .sidebar {
+    display: none !important;  // oculta la izquierda y la derecha
+  }
+
+  .center {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: 1rem;      // margen a los lados; ponlo a 0 si no lo quieres
+    box-sizing: border-box;
+  }
+}
+
+
+// ==============================
 // PERSONALIZACIÓN DE LAS NOTAS
 // ==============================
 
-/* Área de lectura: máximo 1024 px */
+/* Área de lectura: todo el ancho disponible */
 .page article {
   width: 100%;
-  max-width: 1024px;
+  max-width: none;
   min-width: 0;
-  margin-inline: auto;
+  margin-inline: 0;
   line-height: 1.8;
   box-sizing: border-box;
 }
@@ -102,36 +127,6 @@
 }
 
 /* Tus presets: copia una línea, cambia el nombre y los anchos */
-@include cols-preset("cols-a", 15%, 15%, 40%, 15%, 15%);
+@include cols-preset("cols-a", 10%, 25%, 25%, 20%, 20%);
 @include cols-preset("cols-b", 15%, 15%, 40%, 15%, 15%);
 @include cols-preset("cols-c", 5%, 20%, 35%, 20%, 20%);
-
-
-// ==============================
-// SIN BARRAS LATERALES (máximo espacio)
-// ==============================
-
-.page {
-  max-width: 100%;
-  margin: 0;
-}
-
-.page > #quartz-body {
-  display: block !important;   // sin rejilla: no quedan columnas vacías
-
-  .sidebar {
-    display: none !important;  // oculta la izquierda y la derecha
-  }
-}
-
-
-// ==============================
-// ADAPTACIÓN A PANTALLAS PEQUEÑAS
-// ==============================
-
-@media (max-width: 1024px) {
-  .page article {
-    width: 100%;
-    max-width: 100%;
-  }
-}
