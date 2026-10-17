@@ -31,7 +31,7 @@ configuration:
         highlight: rgba(143, 159, 169, 0.15)
         textHighlight: "#fff23688"
       darkMode:
-        light: "#FF00FF"
+        light: "#172F30"
         lightgray: "#23403F"
         gray: "#52706C"
         darkgray: "#C0D1CC"
@@ -111,7 +111,7 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
   - source: "@quartz-themes/core"
-    enabled: true
+    enabled: false
     options:
       theme: default
       mode: both
