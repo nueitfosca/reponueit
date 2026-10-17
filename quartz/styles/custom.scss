@@ -108,24 +108,20 @@
 
 
 // ==============================
-// OCULTAR BARRA IZQUIERDA (buscador y árbol)
+// SIN BARRAS LATERALES (máximo espacio)
 // ==============================
-
-.page > #quartz-body {
-  grid-template-columns: 1fr !important;
-  grid-template-areas:
-    "grid-header"
-    "grid-center"
-    "grid-footer" !important;
-
-  .sidebar.left {
-    display: none !important;
-  }
-}
 
 .page {
   max-width: 100%;
   margin: 0;
+}
+
+.page > #quartz-body {
+  display: block !important;   // sin rejilla: no quedan columnas vacías
+
+  .sidebar {
+    display: none !important;  // oculta la izquierda y la derecha
+  }
 }
 
 
