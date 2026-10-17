@@ -11,7 +11,7 @@
 // ==============================
 
 html {
-  font-size: 175%;   // 100% = 16px. Prueba 120%, 130%, 140%, 150%...
+  font-size: 250%;   // 100% = 16px. Prueba 120%, 130%, 140%, 150%...
 }
 
 // ==============================
@@ -135,6 +135,6 @@ html {
 }
 
 /* Tus presets: copia una línea, cambia el nombre y los anchos */
-@include cols-preset("cols-a", 8%, 8%, 54%, 15%, 15%);
+@include cols-preset("cols-a", 12%, 12%, 46%, 15%, 15%);
 @include cols-preset("cols-b", 10%, 10%, 50%, 15%, 15%);
 @include cols-preset("cols-c", 20%, 20%, 20%, 20%, 20%);
