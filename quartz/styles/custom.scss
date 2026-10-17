@@ -3,7 +3,6 @@
 // put your custom CSS here!
 
 
-@use "./variables.scss" as *;
 
 // ==============================
 // PERSONALIZACIÓN DE LAS NOTAS
@@ -40,7 +39,7 @@
 
 
 // ==============================
-// TABLAS: BORDES Y AJUSTE
+// TABLAS: BORDES UNIDOS Y AJUSTE
 // ==============================
 
 .table-container {
@@ -56,38 +55,28 @@
   width: 100%;
   max-width: 100%;
   table-layout: fixed;
-  border-collapse: separate;
+  border-collapse: collapse;
   border-spacing: 0;
   border: 1px solid var(--lightgray) !important;
   box-sizing: border-box;
 }
 
-/* Celdas y separadores interiores */
+/* Celdas y divisiones interiores */
 .table-container th,
 .table-container td {
   min-width: 0;
   padding: 0.5rem;
   overflow-wrap: anywhere;
   white-space: normal;
-  border: none !important;
-  border-right: 1px solid var(--lightgray) !important;
-  border-bottom: 1px solid var(--lightgray) !important;
+  border: 1px solid var(--lightgray) !important;
 }
 
-/* Evitar doble borde en el lado derecho */
-.table-container th:last-child,
-.table-container td:last-child {
-  border-right: none !important;
-}
-
-/* Evitar doble borde inferior */
-.table-container tbody tr:last-child td {
-  border-bottom: none !important;
-}
-
-/* Ajustar las tablas al ancho del artículo */
+/* Mantener las tablas dentro del área de lectura */
 .page article .table-container {
+  width: 100%;
   max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 
