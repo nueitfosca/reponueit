@@ -3,13 +3,19 @@
 // put your custom CSS here!
 
 
+
 /* ==============================
    PERSONALIZACIÓN DE LAS NOTAS
    ============================== */
 
-/* Lectura */
+/* Área de lectura: máximo 1024 px */
 .page article {
+  width: 100%;
+  max-width: 1024px;
+  min-width: 0;
+  margin-inline: auto;
   line-height: 1.8;
+  box-sizing: border-box;
 }
 
 /* Títulos */
@@ -17,8 +23,10 @@
   letter-spacing: -0.02em;
 }
 
-/* Imágenes */
+/* Imágenes adaptables */
 .page article img {
+  max-width: 100%;
+  height: auto;
   border-radius: 10px;
 }
 
@@ -30,53 +38,66 @@
 }
 
 
-
 /* ==============================
-   TABLAS: UN SOLO MARCO EXTERIOR
+   TABLAS: BORDES Y AJUSTE
    ============================== */
 
 .table-container {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
   border: none !important;
-  overflow-x: auto;
 }
 
 .table-container table {
   width: 100%;
-  border: none !important;
+  max-width: 100%;
+  table-layout: fixed;
   border-collapse: collapse;
+  border: none !important;
 }
 
-/* Separadores interiores */
+/* Texto ajustable dentro de las celdas */
 .table-container th,
 .table-container td {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
   border: none !important;
   border-right: 1px solid var(--lightgray) !important;
   border-bottom: 1px solid var(--lightgray) !important;
 }
 
-/* Eliminar el separador a la derecha de la última columna */
-.table-container th:last-child,
-.table-container td:last-child {
-  border-right: none !important;
-}
-
-/* Marco exterior: arriba y abajo */
+/* Borde superior */
 .table-container thead tr:first-child th {
   border-top: 1px solid var(--lightgray) !important;
 }
 
-.table-container tbody tr:last-child td {
-  border-bottom: 1px solid var(--lightgray) !important;
-}
-
-/* Marco exterior: izquierda y derecha */
+/* Borde izquierdo */
 .table-container th:first-child,
 .table-container td:first-child {
   border-left: 1px solid var(--lightgray) !important;
 }
 
+/* Borde derecho */
 .table-container th:last-child,
 .table-container td:last-child {
   border-right: 1px solid var(--lightgray) !important;
 }
+
+/* Borde inferior */
+.table-container tbody tr:last-child td {
+  border-bottom: 1px solid var(--lightgray) !important;
+}
+
+/* Adaptación a pantallas pequeñas */
+@media (max-width: 1024px) {
+  .page article {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
 
