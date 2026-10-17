@@ -3,7 +3,6 @@
 // put your custom CSS here!
 
 
-
 // ==============================
 // PERSONALIZACIÓN DE LAS NOTAS
 // ==============================
@@ -45,38 +44,35 @@
 .table-container {
   width: 100%;
   max-width: 100%;
-  min-width: 0;
-  overflow-x: clip;
+  margin: 1rem 0;
+  overflow-x: auto;          // en vez de clip, para no recortar bordes
   box-sizing: border-box;
-  border: none !important;
-}
+  border: none;
 
-.table-container table {
-  width: 100%;
-  max-width: 100%;
-  table-layout: fixed;
-  border-collapse: collapse;
-  border-spacing: 0;
-  border: 1px solid var(--lightgray) !important;
-  box-sizing: border-box;
-}
+  > table {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;               // anula el margin de Quartz
+    padding: 0;              // anula el padding de Quartz
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid var(--lightgray);
+    box-sizing: border-box;
 
-/* Celdas y divisiones interiores */
-.table-container th,
-.table-container td {
-  min-width: 0;
-  padding: 0.5rem;
-  overflow-wrap: anywhere;
-  white-space: normal;
-  border: 1px solid var(--lightgray) !important;
-}
+    tr {
+      border: none;          // anula el border-bottom de Quartz
+    }
 
-/* Mantener las tablas dentro del área de lectura */
-.page article .table-container {
-  width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  box-sizing: border-box;
+    th,
+    td {
+      min-width: 0;          // anula el min-width de Quartz
+      padding: 0.5rem 0.7rem;
+      border: 1px solid var(--lightgray);
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+  }
 }
 
 
@@ -90,5 +86,3 @@
     max-width: 100%;
   }
 }
-
-
