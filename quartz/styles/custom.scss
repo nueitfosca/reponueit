@@ -3,10 +3,11 @@
 // put your custom CSS here!
 
 
+@use "./variables.scss" as *;
 
-/* ==============================
-   PERSONALIZACIÓN DE LAS NOTAS
-   ============================== */
+// ==============================
+// PERSONALIZACIÓN DE LAS NOTAS
+// ==============================
 
 /* Área de lectura: máximo 1024 px */
 .page article {
@@ -38,15 +39,15 @@
 }
 
 
-/* ==============================
-   TABLAS: BORDES Y AJUSTE
-   ============================== */
+// ==============================
+// TABLAS: BORDES Y AJUSTE
+// ==============================
 
 .table-container {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
   box-sizing: border-box;
   border: none !important;
 }
@@ -55,14 +56,17 @@
   width: 100%;
   max-width: 100%;
   table-layout: fixed;
-  border-collapse: collapse;
-  border: none !important;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--lightgray) !important;
+  box-sizing: border-box;
 }
 
-/* Texto ajustable dentro de las celdas */
+/* Celdas y separadores interiores */
 .table-container th,
 .table-container td {
   min-width: 0;
+  padding: 0.5rem;
   overflow-wrap: anywhere;
   white-space: normal;
   border: none !important;
@@ -70,29 +74,27 @@
   border-bottom: 1px solid var(--lightgray) !important;
 }
 
-/* Borde superior */
-.table-container thead tr:first-child th {
-  border-top: 1px solid var(--lightgray) !important;
-}
-
-/* Borde izquierdo */
-.table-container th:first-child,
-.table-container td:first-child {
-  border-left: 1px solid var(--lightgray) !important;
-}
-
-/* Borde derecho */
+/* Evitar doble borde en el lado derecho */
 .table-container th:last-child,
 .table-container td:last-child {
-  border-right: 1px solid var(--lightgray) !important;
+  border-right: none !important;
 }
 
-/* Borde inferior */
+/* Evitar doble borde inferior */
 .table-container tbody tr:last-child td {
-  border-bottom: 1px solid var(--lightgray) !important;
+  border-bottom: none !important;
 }
 
-/* Adaptación a pantallas pequeñas */
+/* Ajustar las tablas al ancho del artículo */
+.page article .table-container {
+  max-width: 100%;
+}
+
+
+// ==============================
+// ADAPTACIÓN A PANTALLAS PEQUEÑAS
+// ==============================
+
 @media (max-width: 1024px) {
   .page article {
     width: 100%;
