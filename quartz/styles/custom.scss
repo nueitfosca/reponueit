@@ -23,3 +23,15 @@
   padding: 0.75rem 1rem;
   border-radius: 0 8px 8px 0;
 }
+
+
+/* Líneas verticales entre columnas de las tablas */
+.table-container th:not(:last-child),
+.table-container td:not(:last-child) {
+  border-right: 1px solid var(--lightgray);
+}
+
+/* Mantener visibles los separadores horizontales */
+.table-container tr {
+  border-bottom: 1px solid var(--lightgray);
+}
