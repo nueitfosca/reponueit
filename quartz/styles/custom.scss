@@ -45,34 +45,49 @@
   width: 100%;
   max-width: 100%;
   margin: 1rem 0;
-  overflow-x: auto;          // en vez de clip, para no recortar bordes
+  overflow-x: auto;
   box-sizing: border-box;
   border: none;
 
   > table {
     width: 100%;
     max-width: 100%;
-    margin: 0;               // anula el margin de Quartz
-    padding: 0;              // anula el padding de Quartz
-    table-layout: fixed;
-    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    table-layout: auto;          // columnas proporcionales al contenido
+    border-collapse: separate;   // evita que se recorte el borde derecho
     border-spacing: 0;
-    border: 1px solid var(--lightgray);
+    border-top: 1px solid var(--lightgray);
+    border-left: 1px solid var(--lightgray);
     box-sizing: border-box;
 
     tr {
-      border: none;          // anula el border-bottom de Quartz
+      border: none;
     }
 
     th,
     td {
-      min-width: 0;          // anula el min-width de Quartz
+      min-width: 0;
       padding: 0.5rem 0.7rem;
-      border: 1px solid var(--lightgray);
+      border: none;
+      border-right: 1px solid var(--lightgray);
+      border-bottom: 1px solid var(--lightgray);
       overflow-wrap: anywhere;
       white-space: normal;
     }
   }
+}
+
+/* Opcional: anchos fijos a mano en una nota concreta.
+   Uso: en la nota, cssclasses: [tabla-30-70] */
+.tabla-30-70 .table-container > table {
+  table-layout: fixed;
+
+  th:nth-child(1),
+  td:nth-child(1) { width: 30%; }
+
+  th:nth-child(2),
+  td:nth-child(2) { width: 70%; }
 }
 
 
