@@ -2,7 +2,12 @@
 
 // put your custom CSS here!
 
-/* Personalizar la lectura de las notas */
+
+/* ==============================
+   PERSONALIZACIÓN DE LAS NOTAS
+   ============================== */
+
+/* Lectura */
 .page article {
   line-height: 1.8;
 }
@@ -25,25 +30,22 @@
 }
 
 
-/* Líneas verticales entre las columnas de las tablas */
-.table-container th:not(:last-child),
-.table-container td:not(:last-child) {
-  border-right: 1px solid var(--lightgray);
-}
+/* ==============================
+   TABLAS: BORDES Y SEPARADORES
+   ============================== */
 
-/* Líneas horizontales entre las filas */
-.table-container tr {
-  border-bottom: 1px solid var(--lightgray);
-}
-
-
-/* Contorno exterior de la tabla */
-.table-container table {
+/* Contorno exterior */
+.table-container {
   border: 1px solid var(--lightgray);
-  border-collapse: collapse;
 }
 
-/* Bordes de las celdas del encabezado y del cuerpo */
+/* Tabla y bordes de todas las celdas */
+.table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--lightgray);
+}
+
 .table-container th,
 .table-container td {
   border: 1px solid var(--lightgray);
