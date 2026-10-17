@@ -30,16 +30,16 @@
 }
 
 
+
 /* ==============================
-   TABLAS: BORDES Y SEPARADORES
+   TABLAS: BORDES SIN DOBLE MARCO
    ============================== */
 
-/* Contorno exterior */
 .table-container {
-  border: 1px solid var(--lightgray);
+  border: none;
+  overflow-x: visible;
 }
 
-/* Tabla y bordes de todas las celdas */
 .table-container table {
   width: 100%;
   border-collapse: collapse;
@@ -50,3 +50,4 @@
 .table-container td {
   border: 1px solid var(--lightgray);
 }
+
