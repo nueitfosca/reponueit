@@ -3,8 +3,7 @@ titulo: Geografía de Gor
 libros-cotejados: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
 otras-fuentes: ["Enciclopedia de Gor (World of Gor – Gorean Encyclopaedia)"]
 tags: [gor, geografia]
-cssclasses:
-  - cols-30-70
+cssclasses: [cols-a]
 ---
 
 # Geografía de Gor

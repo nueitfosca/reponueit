@@ -102,7 +102,7 @@
 }
 
 /* Tus presets: copia una línea, cambia el nombre y los anchos */
-@include cols-preset("cols-a", 10%, 25%, 25%, 20%, 20%);
+@include cols-preset("cols-a", 15%, 15%, 40%, 15%, 15%);
 @include cols-preset("cols-b", 15%, 15%, 40%, 15%, 15%);
 @include cols-preset("cols-c", 5%, 20%, 35%, 20%, 20%);
 
