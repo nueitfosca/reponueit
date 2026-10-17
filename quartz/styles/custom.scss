@@ -7,6 +7,14 @@
 @use "sass:list";
 
 // ==============================
+// TAMAÑO BASE DE LA TIPOGRAFÍA
+// ==============================
+
+html {
+  font-size: 150%;   // 100% = 16px. Prueba 120%, 130%, 140%, 150%...
+}
+
+// ==============================
 // PÁGINA A PANTALLA COMPLETA, SIN BARRAS LATERALES
 // ==============================
 
