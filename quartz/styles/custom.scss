@@ -38,9 +38,9 @@
 /* Área de lectura: todo el ancho disponible */
 .page article {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1600px;
   min-width: 0;
-  margin-inline: 0;
+  margin-inline: auto;   // esto es lo que centra
   line-height: 1.8;
   box-sizing: border-box;
 }
