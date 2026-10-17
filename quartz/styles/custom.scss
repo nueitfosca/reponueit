@@ -3,6 +3,9 @@
 // put your custom CSS here!
 
 
+@use "./variables.scss" as *;
+@use "sass:list";
+
 // ==============================
 // PERSONALIZACIÓN DE LAS NOTAS
 // ==============================
@@ -78,17 +81,30 @@
   }
 }
 
-/* Opcional: anchos fijos a mano en una nota concreta.
-   Uso: en la nota, cssclasses: [tabla-30-70] */
-.tabla-30-70 .table-container > table {
-  table-layout: fixed;
 
-  th:nth-child(1),
-  td:nth-child(1) { width: 30%; }
+// ==============================
+// ANCHOS DE COLUMNA A MANO
+// ==============================
 
-  th:nth-child(2),
-  td:nth-child(2) { width: 70%; }
+/* Crea una clase con anchos fijos para las columnas, en orden.
+   Los anchos deben sumar 100%. */
+@mixin cols-preset($name, $widths...) {
+  .#{$name} .table-container > table {
+    table-layout: fixed;
+
+    @for $i from 1 through list.length($widths) {
+      th:nth-child(#{$i}),
+      td:nth-child(#{$i}) {
+        width: list.nth($widths, $i);
+      }
+    }
+  }
 }
+
+/* Tus presets: copia una línea, cambia el nombre y los anchos */
+@include cols-preset("cols-a", 10%, 25%, 25%, 20%, 20%);
+@include cols-preset("cols-b", 15%, 15%, 40%, 15%, 15%);
+@include cols-preset("cols-c", 5%, 20%, 35%, 20%, 20%);
 
 
 // ==============================
