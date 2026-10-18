@@ -1,7 +1,3 @@
-# Port Kar
-
-> Sección P
-
 Port Kar is a great, somewhat ramshackle, city built on the coast at the mouth of the Vosk delta. It is a den of thieves and pirates, smugglers and merchants and is one of the few cities to lack an Ubar or Administrator, instead being ruled by a council of its pirate and merchant captains.
 
 Crowded, squalid, malignant and – unusually – built by the labor of slaves Port Kar has also been known as the 'Tarn of the Sea'. Also unusually, for Gor, Port Kar has always welcomed strangers to its gates to spend gold – or to have it stolen from them.

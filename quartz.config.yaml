@@ -2,7 +2,7 @@
 configuration:
   pageTitle: Quartz 5
   pageTitleSuffix: ""
-  enableSPA: false
+  enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
@@ -16,8 +16,8 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Almendra
+      body: Cardo
       code: IBM Plex Mono
     colors:
       lightMode:
