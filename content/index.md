@@ -1,3 +1,5 @@
-[[geografia_gor_2]]
-[[Port Kar]]
-[[Leah Sublime]]
+---
+title: Indice
+---
+- [[Ciudades/index|Ciudades]]
+- [[Tablas/index|Tablas]]
