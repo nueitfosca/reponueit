@@ -6,6 +6,7 @@
 @use "./variables.scss" as *;
 @use "sass:list";
 
+
 // ==============================
 // TAMAÑO BASE DE LA TIPOGRAFÍA
 // ==============================
@@ -35,6 +36,32 @@ html {
     max-width: 100%;
     padding-inline: 1rem;      // margen a los lados; ponlo a 0 si no lo quieres
     box-sizing: border-box;
+  }
+}
+
+
+// ==============================
+// REDUCIR EL ESPACIO SUPERIOR
+// (en px a propósito: así no se multiplican por el 300% de arriba)
+// ==============================
+
+.page > #quartz-body {
+  .center {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .page-header {
+    margin-top: 4px !important;      // distancia al borde superior
+    margin-bottom: 0 !important;
+  }
+
+  .breadcrumb-container {
+    margin-top: 0 !important;
+  }
+
+  .article-title {
+    margin-top: 12px !important;     // aire entre las migas y el título
   }
 }
 
