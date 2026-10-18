@@ -1,0 +1,1 @@
+[[geografia_gor_2]]
