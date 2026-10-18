@@ -170,3 +170,23 @@ html {
 .page-listing > p:first-child {
   display: none;
 }
+
+// Espacio entre el encabezado y el listado de carpeta
+.page-listing {
+  margin-top: 0 !important;
+}
+
+.page-listing ul.section-ul,
+.page-listing .section {
+  margin-top: 8px !important;
+  padding-top: 0 !important;
+}
+
+.page-listing .section-li {
+  margin-bottom: 8px !important;   // separación entre ciudades
+}
+
+// Párrafo de introducción de tu index.md
+.page article > p:first-of-type {
+  margin-bottom: 8px !important;
+}
